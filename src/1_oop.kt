@@ -11,6 +11,14 @@ class Cycle(model:String, color: String){
 
 class Bike(var model:String,var color:String)
 
+// Getter and setter
+class SmartTv{
+    var speakVolume: Int = 2
+        get() = field * 2
+        set(value){
+            field = value * 2
+        }
+}
 
 fun main(){
     val c = Car()
@@ -35,6 +43,7 @@ fun main(){
     val p3 = Person("Aung",20,"POL")
 }
 
+          // this is primary constructor
 class User(var name: String,var age: Int){
     // constructor
     init {

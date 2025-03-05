@@ -11,4 +11,10 @@ fun main() {
         // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
         println("i = $i")
     }
+
+    greeting(age = 24, name = "Nyein");
+}
+
+fun greeting(name: String, age: Int){
+    println("Hello, $name, your age is $age.")
 }

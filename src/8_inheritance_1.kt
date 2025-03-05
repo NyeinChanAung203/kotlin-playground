@@ -24,4 +24,39 @@ fun main(){
     car.move()
     car.stop()
     println("${car.name} ${car.color}")
+
+    val smartTv = SmartTvDevice("Device Name","samsung")
+    println( smartTv.deviceName + smartTv.deviceCategory)
+}
+
+open  class SmartDevice(val name: String,val category: String){
+    open fun turnOn(){}
+    fun turnOff(){}
+}
+
+class SmartTvDevice(val deviceName: String,val deviceCategory: String) :
+    SmartDevice(name = deviceName, category = deviceCategory) {
+
+        override fun turnOn(){
+            println("SmartTvDevice is turn on")
+        }
+
+    var speakerVolume = 2
+        set(value) {
+            if (value in 0..100) {
+                field = value
+            }
+        }
+
+    var channelNumber = 1
+        set(value) {
+            if (value in 0..200) {
+                field = value
+            }
+        }
+
+    fun increaseSpeakerVolume() {
+        speakerVolume++
+        println("Speaker volume increased to $speakerVolume.")
+    }
 }
